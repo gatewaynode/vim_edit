@@ -1,6 +1,8 @@
 VIM Edit
 ==============
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/gatewaynode/vim_edit/Rust)
+![Crates.io](https://img.shields.io/crates/v/vim_edit)
+![Crates.io](https://img.shields.io/crates/l/vim_edit)
 
 A simple set of functions to create and edit individual Rust Strings with [VIM](https://www.vim.org/).  
 May support more options and features in the near future.
