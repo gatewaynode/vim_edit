@@ -2,7 +2,7 @@ VIM Edit
 ==============
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/gatewaynode/vim_edit/Rust)
 
-A simple set of functions to create and edit individual Strings with [VIM](https://www.vim.org/).  
+A simple set of functions to create and edit individual Rust Strings with [VIM](https://www.vim.org/).  
 May support more options and features in the near future.
 
 Example
