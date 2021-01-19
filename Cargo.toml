@@ -1,9 +1,9 @@
 [package]
 name = "vim_edit"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["gatewaynode <44749714+gatewaynode@users.noreply.github.com>"]
 edition = "2018"
-description = "A simple function to create or edit strings in vim from the CLI"
+description = "A simple set of Rust functions to create or edit strings or files in vim from the CLI"
 keywords = ["vim", "CLI", "tempfile"]
 readme = "README.md"
 license = "MIT"
