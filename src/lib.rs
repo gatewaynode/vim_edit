@@ -1,7 +1,7 @@
 use std::fs;
 use subprocess;
 use tempfile::NamedTempFile;
-
+// use std::path::PathBuf;
 
 /// Create a String in VIM(https://www.vim.org/) if it is installed via a temporary file.  Designed
 /// for CLI use.
@@ -18,10 +18,7 @@ pub fn vim_create() -> String {
     let some_file = NamedTempFile::new();
     let file_path = String::from(some_file.unwrap().path().to_string_lossy());
 
-    subprocess::Exec::cmd("vim")
-        .arg(&file_path)
-        .join()
-        .unwrap();
+    subprocess::Exec::cmd("vim").arg(&file_path).join().unwrap();
 
     fs::read_to_string(&file_path).unwrap()
 }
@@ -41,13 +38,14 @@ pub fn vim_create() -> String {
 pub fn vim_edit(current_string: String) -> String {
     let some_file = NamedTempFile::new();
     let file_path = String::from(some_file.unwrap().path().to_string_lossy());
-    fs::write(&file_path, current_string)
-        .expect("Something went wrong with writing the temp file");
+    fs::write(&file_path, current_string).expect("Something went wrong with writing the temp file");
 
-    subprocess::Exec::cmd("vim")
-        .arg(&file_path)
-        .join()
-        .unwrap();
+    subprocess::Exec::cmd("vim").arg(&file_path).join().unwrap();
 
     fs::read_to_string(&file_path).unwrap()
+}
+
+/// Edit a file given a String instead of Path with vim
+pub fn vim_edit_file(file_path: String) {
+    subprocess::Exec::cmd("vim").arg(&file_path).join().unwrap();
 }

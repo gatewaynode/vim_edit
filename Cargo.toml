@@ -14,5 +14,5 @@ homepage = "https://gatewaynode.com"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-tempfile = "3"
-subprocess = "0.2.4"
+tempfile = "3.2.0"
+subprocess = "0.2.6"
